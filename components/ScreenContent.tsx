@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { Animated, Text, View } from 'react-native';
 
 import { EditScreenInfo } from './EditScreenInfo';
 
@@ -10,12 +10,12 @@ type ScreenContentProps = {
 
 export const ScreenContent = ({ title, path, children }: ScreenContentProps) => {
   return (
-    <View className={styles.container}>
+    <Animated.View className={styles.container}>
       <Text className={styles.title}>{title}</Text>
       <View className={styles.separator} />
       <EditScreenInfo path={path} />
       {children}
-    </View>
+    </Animated.View>
   );
 };
 const styles = {
